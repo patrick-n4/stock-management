@@ -45,6 +45,7 @@
             <label for="cpassword">CONFIRM PASSWORD</label>
             <input type="password" name="cpassword" placeholder="Confirm password" class="border">
             <input type="submit" value="REGISTER" class="border">
+            <a href="./../../DISPLAY/Users/Users.php">Show users</a>
         </form>
     </div>
 </body>

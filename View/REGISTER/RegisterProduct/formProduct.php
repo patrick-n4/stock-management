@@ -14,7 +14,7 @@
 <body>
     <div class="flex items-center justify-center w-[100%]  h-[100vh] flex-col ">
         <h1 class="text-[2em]">Register a product</h1>
-        <form action="./../../Middlewares/Register/registerProduct.php" method="POST" class="grid  grid-cols-2 w-[50%] gap-3">
+        <form action="./../../../Middlewares/Register/registerProduct.php" method="POST" class="grid  grid-cols-2 w-[50%] gap-3">
             <label for="fname">PRODUCT NAME</label>
             <input type="text" name="product_name" placeholder="Product name" class="border">
             <label for="lname">BRAND</label>
@@ -24,7 +24,7 @@
             <label for="supplier_name">SUPPLIER </label>
             <input type="text" name="supplier_name" placeholder="Supplier name" class="border">
             <input type="submit" value="REGISTER" class="border">
-            <a href="./../Products/Products.php">Show Products</a>
+            <a href="./../../../View/DISPLAY/Products/Products.php">Show Products</a>
         </form>
     </div>
 </body>

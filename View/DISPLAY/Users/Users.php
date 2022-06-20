@@ -44,6 +44,7 @@
             <td><?= $row['firstName'] ?></td>
             <td><?= $row['lastName'] ?></td>
             <td><?= $row['telephone'] ?></td>
+            <td><?= $row['gender'] ?></td>
             <td><?= $row['nationality'] ?></td>
             <td><?= $row['username'] ?></td>
             <td><?= $row['email'] ?></td>
