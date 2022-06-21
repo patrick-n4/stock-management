@@ -51,7 +51,6 @@
             <td><?= $row['email'] ?></td>
             <td><?= $row['added_time'] ?></td>
         </tr>
-
 <?php
                 }
             } catch (PDOException $err) {
