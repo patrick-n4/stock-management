@@ -1,28 +1,24 @@
 <?php
-class Product{
-    public $product;
-    public $brand;
-    public $telephone;
-    public $supplier_name;
-    public function __construct($product,$brand,$telephone,$supplier_name){
-    $this->product=$product;
-    $this->brand=$brand;
-    $this->telephone=$telephone;
-    $this->supplier_name=$supplier_name;
+class Product
+{
+    public $quantity;
+    public $product_id;
+    public function __construct($quantity, $product_id)
+    {
+        $this->product = $quantity;
+        $this->product_id = $product_id;
     }
-    public function registerUser($connection){
-        $sql = "INSERT INTO products(product_Name, brand,supplier_phone, supplier) VALUES(:product,:brand,:telephone,:supplier_name)";
+    public function registerUser($connection)
+    {
+        $sql = "INSERT INTO products(quantity,productId) VALUES(:quantity, :product_id)";
         $statement = $connection->prepare($sql);
         $statement->bindParam(':product', $this->product);
-        $statement->bindParam(':brand', $this->brand);
-        $statement->bindParam(':telephone', $this->telephone);
-        $statement->bindParam(':supplier_name', $this->supplier_name);
+        $statement->bindParam(':brand', $this->product_id);
         try {
             $statement->execute();
-            echo "Product registered successfully";
+            echo "You have ordered successfully";
         } catch (PDOException $err) {
-            echo "Error ". $err->getMessage();
+            echo "Error " . $err->getMessage();
         }
     }
-    
 }
