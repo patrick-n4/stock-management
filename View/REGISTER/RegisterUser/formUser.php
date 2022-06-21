@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <title>Register User</title>
-    <link rel="stylesheet" href="./../../public/Styles/style.css">
+    <link rel="stylesheet" href="./../../../public/Styles/style.css">
 </head>
 
 <body>
@@ -45,7 +45,7 @@
             <label for="cpassword">CONFIRM PASSWORD</label>
             <input type="password" name="cpassword" placeholder="Confirm password" class="border">
             <input type="submit" value="REGISTER" class="border">
-            <a href="./../../DISPLAY/Users/Users.php">Show users</a>
+            <a href="./../../../View/DISPLAY/Users/Users.php">Show users</a>
         </form>
     </div>
 </body>

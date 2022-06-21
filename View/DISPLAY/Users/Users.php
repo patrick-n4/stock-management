@@ -15,12 +15,13 @@
             border-collapse: collapse;
         }
     </style>
+    <link rel="stylesheet" href="./../../../public/Styles/style.css">
 </head>
 
 <body>
     <?php include '../../../configs/db.php' ?>
 
-    <table>
+    <table class="">
         <tr>
             <th>User Id</th>
             <th>First Name</th>

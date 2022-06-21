@@ -1,19 +1,22 @@
 <?php
-class Product
+class Order
 {
     public $quantity;
     public $product_id;
-    public function __construct($quantity, $product_id)
+    public $product_name;
+    public function __construct($quantity, $product_id, $product_name)
     {
-        $this->product = $quantity;
+        $this->quantity = $quantity;
         $this->product_id = $product_id;
+        $this->product_name = $product_name;
     }
-    public function registerUser($connection)
+    public function registerOutgoing($connection)
     {
-        $sql = "INSERT INTO products(quantity,productId) VALUES(:quantity, :product_id)";
+        $sql = "INSERT INTO outgoing(productId,quantity, productName) VALUES(:product_id, :quantity,:product_name)";
         $statement = $connection->prepare($sql);
-        $statement->bindParam(':product', $this->product);
-        $statement->bindParam(':brand', $this->product_id);
+        $statement->bindParam(':product_id', $this->product_id);
+        $statement->bindParam(':quantity', $this->quantity);
+        $statement->bindParam(':product_name', $this->product_name);
         try {
             $statement->execute();
             echo "You have ordered successfully";

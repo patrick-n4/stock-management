@@ -15,6 +15,7 @@
             border-collapse: collapse;
         }
     </style>
+    <link rel="stylesheet" href="./../../../public/Styles/style.css">
 </head>
 
 <body>
@@ -42,7 +43,7 @@
             <td><?= $row['brand'] ?></td>
             <td><?= $row['supplier_phone'] ?></td>
             <td><?= $row['supplier'] ?></td>
-            <td><?= "<a href='./../../../Middlewares/Register/registerOutGoing.php?product_id={$row['productId']}'>Order</a>" ?></td>
+            <td><?= "<a href='../../REGISTER/Outgoing/Outgoing.php?product_id={$row['productId']}&product_name={$row['product_Name']}'>Order</a>" ?></td>
         </tr>
 
 <?php
